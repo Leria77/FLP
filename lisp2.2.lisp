@@ -1,0 +1,5 @@
+(defun x-doubles (m &optional ac) 
+(cond ((null m) (reverse ac)) 
+	((member (car m) ac) (x-doubles (cdr m) ac)) 
+	((x-doubles (cdr m) (cons (car m) ac))))) 
+(x-doubles '(3 a w e q e r d 3))
